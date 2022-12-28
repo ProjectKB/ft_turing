@@ -1,2 +1,5 @@
 .pytest_cache
+.idea
 venv
+__pycache__
+src/__pycache__
