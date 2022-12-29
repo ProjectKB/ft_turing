@@ -1,7 +1,7 @@
 import argparse as a
 
 from src.parser import parse
-from src.machine import Machine
+from src.machine import get_transitions, get_tape, show, process
 
 if __name__ == '__main__':
     argparse = a.ArgumentParser()
@@ -17,8 +17,11 @@ if __name__ == '__main__':
         argparse.error(
             'you have to provide a file and an input [-i] and [-f].')
 
-    json_file = parse(args.file)
-    machine = Machine(json_file, args.input)
+    machine = parse(args.file)
+    tape = get_tape(args.input, machine)
+    transitions = get_transitions(machine)
 
-    # print(machine.transitions_dict)
-    machine.process()
+    show(machine)
+    process(machine, tape, transitions)
+
+
