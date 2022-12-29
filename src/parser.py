@@ -4,7 +4,7 @@ from pathlib import Path
 from src.error import Error as e
 
 
-def parse(file_name: str):
+def parse(file_name: str) -> dict:
     if not Path(file_name).is_file():
         e.throw(e.FAIL, e.FILE_NOT_FOUND_ERROR, f"file not found: {file_name}")
 
@@ -21,6 +21,8 @@ def parse(file_name: str):
     for check in [__general_check, __alphabet_check, __name_check, __blank_check, __states_check, __initial_check,
                   __finals_check, __transitions_check]:
         check(json_file)
+
+    return json_file
 
 
 def __is_empty(values) -> bool:

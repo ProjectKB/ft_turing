@@ -3,8 +3,6 @@ import subprocess
 OKGREEN = '\033[92m'
 ENDC = '\033[0m'
 
-BLANK = ""
-
 FILE_FORMAT_BASIC = "fileFormatBasic"
 FILE_FORMAT_GENERAL = "fileFormatGeneral"
 FILE_FORMAT_ALPHABET = "fileFormatAlphabet"
