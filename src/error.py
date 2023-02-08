@@ -23,9 +23,11 @@ class Error:
     JSON_DECODE_ERROR = "JSONDecodeError"
     JSON_FORMAT_ERROR = "JSONFormatError"
     EMPTY_FIELD_ERROR = "EmptyFieldError"
+    UNHANDLED_FILE_ERROR = "UnhandledFileError"
     TYPE_ERROR = "TypeError"
     REPETITION_ERROR = "RepetitionError"
     SIZE_ERROR = "SizeError"
+    INPUT_ERROR = "InputError"
 
     @staticmethod
     def print_error(*msg):
