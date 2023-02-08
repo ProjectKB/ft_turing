@@ -15,7 +15,7 @@ FILE_FORMAT_TRANSITIONS = "fileFormatTransitions"
 
 
 def launch(path, input='test'):
-    return str(subprocess.run(["python3", "main.py", "-f", path, "-i", input], capture_output=True).stdout)
+    return str(subprocess.run(["python3", "main.py", path, input], capture_output=True).stdout)
 
 
 def print_success(type, message, start=''):
