@@ -1,6 +1,3 @@
-from src.error import Error
-
-
 def show(machine: dict):
     print(
         f"Name: {machine['name']}\n"
@@ -77,7 +74,6 @@ def __get_state(transitions: dict, current: dict) -> str:
 
 def __move_head(transitions: dict, current: dict) -> int:
     return 1 if transitions[current['state']][current['head']]['action'] == "RIGHT" else -1
-from src.error import Error
 
 
 def show(machine: dict):

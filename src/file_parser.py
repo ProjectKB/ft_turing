@@ -3,6 +3,7 @@ from pathlib import Path
 
 from src.error import Error
 
+
 def file_parser(file_name: str) -> dict:
     if not Path(file_name).is_file():
         Error.throw(Error.FAIL, Error.FILE_NOT_FOUND_ERROR, f"file not found: {file_name}")
